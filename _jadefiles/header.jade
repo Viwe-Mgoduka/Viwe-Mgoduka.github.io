@@ -1,0 +1,21 @@
+mixin nav-content()
+  ul
+    li: a(href="#homr") Home 
+    li: a(href="#about") About 
+    li: a(href="#work") Work
+    li: a(href="#contact") Contact
+
+.mobile-nav.is-open
+  +nav-content() 
+
+header
+  .header-position
+    h1.logo Viwe Mgoduka
+
+    nav.site-nav
+      +nav-content()  
+
+    .vol 
+        h4 mute
+
+    .mobile-nav-toggle: span
