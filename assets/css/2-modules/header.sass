@@ -1,0 +1,175 @@
+.home-wrap 
+    header 
+        width: 120px
+        background: white
+        padding: 1px 0
+
+        .header-position
+            position: fixed
+            top: 0
+            left: 0
+            bottom: 0
+            width: 120px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+
+            .logo
+                +hide-text
+                max-width: 120px
+                background: 
+                    image: url(/assets/images/logo.svg)
+                    repeat: no-repeat
+                    position: center
+                    size: 50%
+                padding: 0
+                margin: 0
+
+            .site-nav
+                ul
+                    list-style: none
+                    margin: 20px 0
+                    padding: 0 25px 0 0
+                    text-align: right
+
+                    li
+                        margin-bottom: 10px
+                        font-weight: 900
+
+                        &:nth-child(1)
+                            width: 100%
+                            background-color: black
+                            padding: 0 15px 0 10px
+                        &:nth-child(2)
+                            width: 100%
+                            background-color: #DC0000
+                            padding: 0 15px 0 10px       
+                        &:nth-child(3)
+                            width: 100%
+                            background-color: #009A00
+                            padding: 0 15px 0 10px 
+                        &:nth-child(4)
+                            margin-bottom: 0
+                            width: 100%
+                            background-color: #FFCC00
+                            padding: 0 15px 0 10px 
+                        
+
+            .vol
+                +hide-text
+                border: none
+                background: 
+                    image: url(/assets/images/vol_off.svg)
+                    repeat: no-repeat
+                    position: center
+                    size: 20%
+            
+            .mobile-nav-toggle
+                display: none
+                width: 40px
+                height: 55px
+                margin-right: 10px
+                align-items: center
+                cursor: pointer
+
+                span,
+                span:before,
+                span:after
+                    content: "" 
+                    display: block
+                    height: 6px
+                    width: 100%
+                    background: black
+                    position: relative
+
+                span:before
+                    top: 12px
+
+                span:after
+                    bottom: 18px
+                    
+                &:hover span 
+                    background: #009A00
+
+                &:hover span:before 
+                    background: #DC0000
+                    
+                &:hover span:after 
+                    background: #FFCC00
+
+                &.is-open span
+                    background: transparent
+
+                &.is-open span:before,
+                &.is-open span:after
+                    transform-origin: center
+                    transform: rotate(45deg)
+                    top: 0
+
+                &.is-open span:before
+                    transform: rotate(-45deg)
+    // mobile nav
+    .mobile-nav
+        display: none
+        position: absolute
+        width: 100%
+        background: whitesmoke
+        padding: 30px 0 20px
+        transform: translateY(-100%)
+        transition: all 0.3s ease
+
+        ul
+            list-style: none
+            margin: 0
+            padding: 0
+
+
+
+@media (max-width: 775px)
+    .home-wrap 
+        header
+            width: auto
+            margin: -5px 0
+
+            .header-position
+                width: auto
+                position: relative
+                top: auto
+                bottom: auto
+                left: auto
+                flex-direction: row
+                align-items: center
+                height: 80px
+
+                .logo
+                    margin-left: -20px
+                    margin-right: 20px
+
+                .site-nav
+                    display: none
+
+                
+                .vol
+                    position: absolute
+                    left: 44vw
+                    top: 90vh
+                    width: 100px
+
+                .mobile-nav-toggle
+                    display: flex
+
+        .mobile-nav.is-open
+            display: block
+            transform: translateY(0%)
+
+            ul
+                list-style: none
+                margin: 0
+                padding: 0
+            li
+                text-align: center
+                margin-bottom: 10px
+
+        
+          
+                
