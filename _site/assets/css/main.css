@@ -7,6 +7,7 @@
  */
 /* Document
    ========================================================================== */
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -487,13 +488,13 @@ body {
   font-size: 14px;
   line-height: 1.6;
   font-family: 'Fira Sans', sans-serif;
-  color: #2E2D33;
+  color: black;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
 
 .home-wrap header {
   width: 120px;
-  background: white;
+  background: whitesmoke;
   padding: 1px 0; }
   .home-wrap header .header-position {
     position: fixed;
@@ -517,7 +518,7 @@ body {
       background-position: center;
       background-size: 50%;
       padding: 0;
-      margin: 0; }
+      margin: 10px 0; }
     .home-wrap header .header-position .site-nav ul {
       list-style: none;
       margin: 20px 0;
@@ -525,7 +526,7 @@ body {
       text-align: right; }
       .home-wrap header .header-position .site-nav ul li {
         margin-bottom: 10px;
-        font-weight: 900; }
+        font-weight: 700; }
         .home-wrap header .header-position .site-nav ul li:nth-child(1) {
           width: 100%;
           background-color: black;
@@ -628,8 +629,8 @@ body {
         display: none; }
       .home-wrap header .header-position .vol {
         position: absolute;
-        left: 44vw;
-        top: 90vh;
+        right: 12vw;
+        top: -0.5vh;
         width: 100px; }
       .home-wrap header .header-position .mobile-nav-toggle {
         display: -ms-flexbox;
@@ -643,8 +644,36 @@ body {
       margin: 0;
       padding: 0; }
     .home-wrap .mobile-nav.is-open li {
+      font-weight: 700;
       text-align: center;
       margin-bottom: 10px; } }
+
+section.home {
+  background-image: url(../images/profile_pic.png);
+  background-position: right center;
+  background-size: 42%;
+  background-repeat: no-repeat;
+  background-margin-right: 50px;
+  margin-top: -50px;
+  margin-right: 50px; }
+  section.home h1, section.home h2, section.home h3, section.home h4, section.home h5, section.home h6 {
+    color: black;
+    font-family: "Press Start 2P";
+    font-size: 30px;
+    line-height: 1em; }
+  section.home h2 {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg); }
+  section.home .name {
+    margin-top: 350px;
+    position: relative;
+    right: 11vw; }
+  section.home .r-words {
+    text-align: right;
+    margin-top: 220px;
+    margin-left: 70px; }
+    section.home .r-words .randoms {
+      margin: 5px 0; }
 
 .home-wrap {
   display: -ms-flexbox;
@@ -653,3 +682,38 @@ body {
   @media (max-width: 775px) {
     .home-wrap {
       display: block; } }
+  .home-wrap .home-sections {
+    -ms-flex: 1;
+        flex: 1; }
+    .home-wrap .home-sections section {
+      padding: 50px 0;
+      height: 100vh; }
+    .home-wrap .home-sections .flex {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: rows;
+          flex-direction: rows; }
+    .home-wrap .home-sections .flex--center {
+      -ms-flex-pack: center;
+          justify-content: center; }
+    .home-wrap .home-sections .flex--space-around {
+      -ms-flex-pack: distribute;
+          justify-content: space-around; }
+    .home-wrap .home-sections .order-first {
+      -ms-flex-order: -1;
+          order: -1; }
+  .home-wrap .col-1 {
+    max-width: 500px;
+    margin: 0 5px; }
+  .home-wrap .col-2 {
+    max-width: 1000px;
+    margin: 0 10px; }
+  .home-wrap .col-3 {
+    width: 50%; }
+  @media (max-width: 640px) {
+    .home-wrap .home-sections .flex {
+      display: block; }
+    .home-wrap .col-1 {
+      max-width: 100%; }
+    .home-wrap .col-3 {
+      width: auto; } }
